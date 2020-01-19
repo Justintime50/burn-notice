@@ -26,7 +26,7 @@ Burn Notice will remove potentially sensitive data as well as the majority of it
 
 - Anything in the `Applications` folder
 - Anything stored outside your personal home folder
-- This does not sign you out if iCloud
+- This does not sign you out of iCloud
 - This does not remove browser data
 
 ### Command
