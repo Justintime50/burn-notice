@@ -28,8 +28,8 @@ LISTFILES="
     .zshrc
 "
 
-for ITEM in LISTFILES ; do
-    rm -rf $HOME/$ITEM
+for ITEM in $LISTFILES ; do
+    rm -rf "$HOME"/"${ITEM:?}"
 done
 
 # Remove the contents of the user's most used directories
@@ -42,8 +42,8 @@ LISTDIRECTORIES="
     Pictures/*
 "
 
-for ITEM in LISTDIRECTORIES ; do
-    cd $HOME/$ITEM || exit
+for ITEM in $LISTDIRECTORIES ; do
+    cd "$HOME"/"$ITEM" || exit
     rm -rf .[^.]*
     cd .. || exit
 done
