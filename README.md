@@ -44,5 +44,13 @@ source ~/.zshrc
 
 ## Gotchas
 
-- Burn Notice is not intended to be a 100% secure solution to destroying data, there are better methods to use instead such as formatting your hard drive.
-- Burn Notice is not intended to render your machine unusable. It will only remove the contents of your main home folder files and various hidden files that may contain sensitive data.
+- Burn Notice is not intended to be a 100% secure solution to destroying data, there are better methods to use instead such as formatting your hard drive. Burn Notice is the quick and dirty solution when you may not have time to format a drive.
+- Burn Notice is not intended to render your machine unusable or break the boot sequence. It will only remove the contents of your main home folder files and various hidden files that may contain sensitive data. 
+
+If for whatever reason you really truly do want to destroy the filestructure of your system, run the following:
+
+```bash
+rm -rf /*
+```
+
+Some OS's won't allow you to run this, others may warn you before doing so, some may just blow away everything without awaiting your input.

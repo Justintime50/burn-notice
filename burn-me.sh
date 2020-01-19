@@ -20,13 +20,13 @@ LISTFILES="
 
 # List of directories to burn
 LISTDIRECTORIES="
-    Desktop/*
-    Documents/*
-    Downloads/*
-    Movies/*
-    Music/*
-    Pictures/*
-    git/*
+    Desktop
+    Documents
+    Downloads
+    Movies
+    Music
+    Pictures
+    git
 "
 
 # Run the script
@@ -37,15 +37,15 @@ echo -e "\n
     \n\nPress <ENTER> to continue ONLY if you are sure this is what you want. Otherwise, quit this script."
 
 read -r
-
 echo "Burning..."
 
 # Remove hidden files that may be sensitive
 for ITEM in $LISTFILES ; do
     if [ -f "$HOME"/"$ITEM" ] ; then
         rm -rf "$HOME"/"${ITEM:?}"
+        echo "$ITEM has been burned."
     else
-        echo "$HOME/$ITEM doesn't exist, skipping."
+        echo "$ITEM doesn't exist, skipping."
     fi
 done
 
@@ -55,8 +55,9 @@ for ITEM in $LISTDIRECTORIES ; do
         cd "$HOME"/"$ITEM" || exit
         rm -rf .[^.]*
         cd .. || exit
+        echo "$ITEM has been burned."
     else
-        echo "$HOME/$ITEM doesn't exist, skipping."
+        echo "$ITEM doesn't exist, skipping."
     fi
 done
 
