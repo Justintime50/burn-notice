@@ -1,34 +1,42 @@
 #!/bin/bash
 
 # List of hidden files to burn
-LISTFILES="
-    .aws 
-    .bash_history
-    .bash_sessions
-    .composer
-    .config
-    .docker
-    .gem
-    .gitconfig
-    .npm
-    .npmrc
-    .ssh
-    .vscode
-    .zsh_history
-    .zshrc
-"
+LISTFILES=(
+    ".aws"
+    ".bash_history"
+    ".bash_profile"
+    ".gitconfig"
+    ".npmrc"
+    ".viminfo"
+    ".zsh_history"
+    ".zshrc"
+)
 
 # List of directories to burn
-LISTDIRECTORIES="
-    Applications
-    Desktop
-    Documents
-    Downloads
-    Movies
-    Music
-    Pictures
-    git
-"
+LISTDIRECTORIES=(
+    ".bash_sessions"
+    ".cache"
+    ".composer"
+    ".config"
+    ".docker"
+    ".gem"
+    ".local"
+    ".npm"
+    ".pylint.d"
+    ".ssh"
+    ".vscode"
+    "Applications"
+    "bin"
+    "Desktop"
+    "Documents"
+    "Downloads"
+    "Movies"
+    "Music"
+    "Pictures"
+    "Public"
+    "git"
+    "github-archive"
+)
 
 # Run the script
 echo -e "\n
@@ -42,7 +50,7 @@ echo "Burning..."
 
 # Remove hidden files that may be sensitive
 for ITEM in $LISTFILES ; do
-    if [ -f "$HOME"/"$ITEM" ] ; then
+    if [[ -f "$HOME"/"$ITEM" ]] ; then
         rm -rf "$HOME"/"${ITEM:?}"
         echo "$ITEM has been burned."
     else
@@ -52,7 +60,7 @@ done
 
 # Remove the contents of the user's most used directories
 for ITEM in $LISTDIRECTORIES ; do
-    if [ -f "$HOME"/"$ITEM" ] ; then
+    if [[ -f "$HOME"/"$ITEM" ]] ; then
         cd "$HOME"/"$ITEM" || exit
         rm -rf .[^.]*
         cd .. || exit
