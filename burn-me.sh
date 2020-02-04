@@ -34,6 +34,7 @@ LISTDIRECTORIES=(
     "Music"
     "Pictures"
     "Public"
+    "Trash"
     "git"
     "github-archive"
 )
