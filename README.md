@@ -2,7 +2,7 @@
 
 # Burn Notice
 
-New machine, got let go, or got burned? Remove the most used data from your computer with one command.
+Returning a machine to IT, got let go, or got burned? Burn your data with one command.
 
 [![Build Status](https://travis-ci.org/Justintime50/burn-notice.svg?branch=master)](https://travis-ci.org/Justintime50/burn-notice)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
@@ -17,14 +17,14 @@ Burn Notice will remove potentially sensitive data as well as the majority of it
 
 ### This includes:
 
-- .ssh
-- .zshrc/.bash_profile and .bash_history/.bash_sessions
-- Other .config files/folders that may include keys, secrets, etc housed in the root of your home folder
-- Desktop, Documents, Downloads, Movies, Pictures, Music
+- `.ssh`
+- `.zshrc`, `.bash_profile`, `.bash_history`, and `.bash_sessions`
+- Other `dotfiles` and folders that may include keys, secrets, etc housed in the root of your home folder
+- `Desktop`, `Documents`, `Downloads`, `Movies`, `Pictures`, `Music`, `~/Applications`
 
 ### This does not include:
 
-- Anything in the `Applications` folder
+- Anything in the root `/Applications` folder
 - Anything stored outside your personal home folder
 - This does not sign you out of iCloud
 - This does not remove browser data
@@ -35,17 +35,20 @@ Burn Notice will remove potentially sensitive data as well as the majority of it
 ./burn-me.sh
 ```
 
-You can also create an alias to have this script readily available if the need arose:
+### Alias
 
 ```bash
+# If using Bash, use ~/.bash_profile instead
 echo 'alias burn-me="/path/to/burn-me.sh"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
 ## Gotchas
 
-- Burn Notice is not intended to be a 100% secure solution to destroying data, there are better methods to use instead such as formatting your hard drive. Burn Notice is the quick and dirty solution when you may not have time to format a drive.
-- Burn Notice is not intended to render your machine unusable or break the boot sequence. It will only remove the contents of your main home folder files and various hidden files that may contain sensitive data. 
+- **Burn Notice is not intended to be a 100% secure solution to destroying data** There are better methods to use instead such as formatting your hard drive. Burn Notice is the quick and dirty solution when you may not have time to format a drive.
+- **Burn Notice is not intended to render your machine unusable or break the boot sequence.** It will only remove the contents of your main home folder files and various hidden files that may contain sensitive data. 
+
+### Destroy your Filesystem
 
 If for whatever reason you really truly do want to destroy the filestructure of your system, run the following:
 
