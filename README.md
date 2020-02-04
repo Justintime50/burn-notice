@@ -20,7 +20,7 @@ Burn Notice will remove potentially sensitive data as well as the majority of it
 - `.ssh`
 - `.zshrc`, `.bash_profile`, `.bash_history`, and `.bash_sessions`
 - Other `dotfiles` and folders that may include keys, secrets, etc housed in the root of your home folder
-- `Desktop`, `Documents`, `Downloads`, `Movies`, `Pictures`, `Music`, `~/Applications`
+- `~/Applications`, `Desktop`, `Documents`, `Downloads`, `Movies`, `Music`, `Pictures`, `Trash`
 
 ### This does not include:
 
