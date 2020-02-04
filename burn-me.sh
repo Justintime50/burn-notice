@@ -20,6 +20,7 @@ LISTFILES="
 
 # List of directories to burn
 LISTDIRECTORIES="
+    Applications
     Desktop
     Documents
     Downloads
