@@ -13,19 +13,17 @@ Returning a machine to IT, got let go, or got burned? Burn your data with one co
 
 ## Usage
 
-Burn Notice will remove potentially sensitive data as well as the majority of items from your home folder excluding apps. 
+Burn Notice will remove all files from your home directory leaving file structure alone intact. 
 
-### This includes:
+### Notable inclusions:
 
-- `.ssh`
-- `.zshrc`, `.bash_profile`, `.bash_history`, and `.bash_sessions`
+- `~/Applications`, `~/Desktop`, `~/Documents`, `~/Downloads`, `~/Movies`, `~/Music`, `~/Pictures`, `~/Trash`
+- `.ssh`, `.aws`, `.zshrc`, `.bash_profile`, `.bash_history`, and `.bash_sessions`
 - Other `dotfiles` and folders that may include keys, secrets, etc housed in the root of your home folder
-- `~/Applications`, `Desktop`, `Documents`, `Downloads`, `Movies`, `Music`, `Pictures`, `Trash`
 
 ### This does not include:
 
-- Anything in the root `/Applications` folder
-- Anything stored outside your personal home folder
+- Anything stored outside your personal home folder (eg: root `/Applications` folder)
 - This does not sign you out of iCloud
 - This does not remove browser data
 
