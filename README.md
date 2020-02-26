@@ -17,7 +17,7 @@ Burn Notice will remove all files from your home directory leaving file structur
 
 ### Notable inclusions:
 
-- `~/Applications`, `~/Desktop`, `~/Documents`, `~/Downloads`, `~/Movies`, `~/Music`, `~/Pictures`, `~/Trash`
+- `~/Applications`, `~/Desktop`, `~/Documents`, `~/Downloads`, `~/Movies`, `~/Music`, `~/Pictures`
 - `.ssh`, `.aws`, `.zshrc`, `.bash_profile`, `.bash_history`, and `.bash_sessions`
 - Other `dotfiles` and folders that may include keys, secrets, etc housed in the root of your home folder
 
@@ -26,6 +26,8 @@ Burn Notice will remove all files from your home directory leaving file structur
 - Anything stored outside your personal home folder (eg: root `/Applications` folder)
 - This does not sign you out of iCloud
 - This does not remove browser data
+- Removing Trash items - [see why](https://www.imore.com/how-force-empty-trash-your-mac-using-terminal)
+- Remove `~/Library` - requires sudo access and is necessary for the user account to function
 
 ### Command
 
@@ -55,3 +57,7 @@ rm -rf /*
 ```
 
 Some OS's won't allow you to run this, others may warn you before doing so, some may just blow away everything without awaiting your input.
+
+## Disclaimer
+
+I take no responsibility for what you destroy. Run this script at your own risk.
