@@ -4,7 +4,7 @@
 
 Returning a machine to IT, got let go, or got burned? Burn your data with one command.
 
-[![Build Status](https://travis-ci.org/Justintime50/burn-notice.svg?branch=master)](https://travis-ci.org/Justintime50/burn-notice)
+[![Build Status](https://travis-ci.com/Justintime50/burn-notice.svg?branch=master)](https://travis-ci.com/Justintime50/burn-notice)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 <img src="assets/showcase.png">
