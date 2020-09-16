@@ -1,4 +1,4 @@
 language: bash
 
 script:
-    - shellcheck burn-me.sh
+    - shellcheck src/*.sh
