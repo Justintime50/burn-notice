@@ -5,15 +5,13 @@
 Returning a machine to IT, got let go, or got burned? Burn your data with one command.
 
 [![Build Status](https://travis-ci.com/Justintime50/burn-notice.svg?branch=master)](https://travis-ci.com/Justintime50/burn-notice)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![Licence](https://img.shields.io/github/license/justintime50/burn-notice)](LICENSE)
 
-<img src="assets/showcase.png">
+<img src="assets/showcase.png" alt="Showcase">
 
 </div>
 
-## Usage
-
-Burn Notice will remove all files from your home directory leaving file structure alone intact. 
+Burn Notice will remove all files from your home directory leaving folder structures intact. 
 
 ### Notable inclusions:
 
@@ -29,18 +27,22 @@ Burn Notice will remove all files from your home directory leaving file structur
 - Removing Trash items - [see why](https://www.imore.com/how-force-empty-trash-your-mac-using-terminal)
 - Remove `~/Library` - requires sudo access and is necessary for the user account to function
 
-### Command
+## Install
 
 ```bash
-./burn-me.sh
+# Setup the tap
+brew tap justintime50/formulas
+
+# Install the tool
+brew install burn-notice
 ```
 
-### Alias
+## Usage
+
+Burn Notice will ask for confirmation before proceeding.
 
 ```bash
-# If using Bash, use ~/.bash_profile instead
-echo 'alias burn-me="/path/to/burn-me.sh"' >> ~/.zshrc
-source ~/.zshrc
+burn-notice
 ```
 
 ## Gotchas
@@ -56,8 +58,8 @@ If for whatever reason you really truly do want to destroy the filestructure of 
 rm -rf /*
 ```
 
-Some OS's won't allow you to run this, others may warn you before doing so, some may just blow away everything without awaiting your input.
+**NOTE:** Some OS's won't allow you to run this, others may warn you before doing so, some may just blow away everything without awaiting your input. Use at your own risk.
 
 ## Disclaimer
 
-I take no responsibility for what you destroy. Run this script at your own risk.
+**I take no responsibility for what you destroy. Run this script at your own risk.**
