@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.1.0 (2020-10-05)
+
+* Moved all logic to functions
+* Replaced global variables with local variables
+
 ## v1.0.0 (2020-09-16)
 
 * Now installable via Homebrew
