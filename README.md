@@ -2,7 +2,7 @@
 
 # Burn Notice
 
-Returning a machine to IT, got let go, or got burned? Burn your data with one command.
+Returning a machine to IT, got let go, or got burned? Delete your data with one command.
 
 [![Build Status](https://travis-ci.com/Justintime50/burn-notice.svg?branch=master)](https://travis-ci.com/Justintime50/burn-notice)
 [![Licence](https://img.shields.io/github/license/justintime50/burn-notice)](LICENSE)
@@ -11,7 +11,7 @@ Returning a machine to IT, got let go, or got burned? Burn your data with one co
 
 </div>
 
-Burn Notice will remove all files from your home directory leaving folder structures intact. 
+Burn Notice will remove all files from your home directory, leaving folder structures intact. 
 
 ### Notable inclusions:
 
@@ -22,9 +22,9 @@ Burn Notice will remove all files from your home directory leaving folder struct
 ### This does not include:
 
 - Anything stored outside your personal home folder (eg: root `/Applications` folder)
-- This does not sign you out of iCloud
+- This does not sign you out of iCloud or other cloud storage providers (it actively tries to ignore these)
 - This does not remove browser data
-- Removing Trash items - [see why](https://www.imore.com/how-force-empty-trash-your-mac-using-terminal)
+- Removing items in the Trash - [see why](https://www.imore.com/how-force-empty-trash-your-mac-using-terminal)
 - Remove `~/Library` - requires sudo access and is necessary for the user account to function
 
 ## Install
@@ -39,7 +39,7 @@ brew install burn-notice
 
 ## Usage
 
-Burn Notice will ask for confirmation before proceeding.
+Once invoked, Burn Notice will ask for confirmation and provide a warning before proceeding.
 
 ```bash
 burn-notice

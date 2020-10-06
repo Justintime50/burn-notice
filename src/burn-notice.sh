@@ -1,55 +1,78 @@
 #!/bin/bash
 
-# Script setup
-echo -e "\n
-    #################################################### 
-    WARNING! BURN NOTICE WILL IRREVERSIBLY DESTROY DATA! 
-    #################################################### 
+main() {
+    print_start_message
+    read -r
+    start_countdown
+    remove_hidden_items
+    remove_visible_items
+    print_end_message
+    history -c
+}
+
+print_start_message() {
+    echo -e "\n
+#################################################### 
+WARNING! BURN NOTICE WILL IRREVERSIBLY DESTROY DATA! 
+#################################################### 
 \n\nPress <ENTER> to continue ONLY if you are sure this is what you want. Otherwise, quit this script."
-read -r
-# Grace period allowing a user to quit if they accidentally continued
-SECONDS=(5 4 3 2 1)
-for SECOND in "${SECONDS[@]}" ; do
-    echo "Burning in $SECOND seconds..."
-    sleep 1
-done
-cd "$HOME" || exit
+}
 
-# Remove hidden files/folders
-for ITEM in .[^.]* ; do
-    if [[ -d "$ITEM" ]] ; then
-        cd "$ITEM" || exit
-        rm -rf ./*
-        rm -rf .[^.]*
-        cd .. || exit
-        echo "$HOME/$ITEM contents burned."
-    else
-        rm -f "$ITEM"
-        echo "$HOME/$ITEM burned."
-    fi
-done
+print_end_message() {
+    echo -e "\n
+#######################################################
+BURN NOTICE COMPLETE! MAKE SURE TO CLOSE THIS TERMINAL!
+#######################################################    
+\n\nTo fully burn your identity, it's suggested to also remove browsing data, log out of iCloud and other installed apps, and if very paranoid, format your hard drive. Remember, this script did not remove your trash, browser data, or log you out of iCloud or other accounts."
+}
 
-# Remove visible files/folders
-for ITEM in * ; do
-    # Ignore the most common cloud storage provider folders
-    if ! [[ "$ITEM" = "Nextcloud" || "$ITEM" = "nextcloud" || "$ITEM" = "Owncloud" || "$ITEM" = "owncloud" || "$ITEM" = "Nextcloud" || "$ITEM" = "Dropbox" || "$ITEM" = "dropbox" || "$ITEM" = "Google Drive File Stream" || "$ITEM" = "My Drive" || "$ITEM" = "Google Drive" || "$ITEM" = "OneDrive" || "$ITEM" = "Backup and Sync" || "$ITEM" = "Box" ]] ; then
-        if [[ -d "$ITEM" ]] ; then
-            cd "$ITEM" || exit
+start_countdown() {    
+    # Grace period allowing a user to quit if they accidentally continued
+    local seconds
+    local second
+    seconds=(5 4 3 2 1)
+    for second in "${seconds[@]}" ; do
+        echo "Burning in $second seconds..."
+        sleep 1
+    done
+    cd "$HOME" || exit
+}
+
+remove_hidden_items() {
+    # Remove hidden files/folders
+    local item
+    for item in .[^.]* ; do
+        if [[ -d "$item" ]] ; then
+            cd "$item" || exit
             rm -rf ./*
             rm -rf .[^.]*
             cd .. || exit
-            echo "$HOME/$ITEM contents burned."
+            echo "$HOME/$item contents burned."
         else
-            rm -f "$ITEM"
-            echo "$HOME/$ITEM burned."
+            rm -f "$item"
+            echo "$HOME/$item burned."
         fi
-    fi
-done
+    done
+}
 
-echo -e "\n
-    #######################################################
-    BURN NOTICE COMPLETE! MAKE SURE TO CLOSE THIS TERMINAL!
-    #######################################################    
-\n\nTo fully burn your identity, it's suggested to also remove browsing data, log out of iCloud and other installed apps, and if very paranoid, format your hard drive. Remember, this script did not remove your trash, browser data, or log you out of iCloud or other accounts."
+remove_visible_items() {
+    # Remove visible files/folders
+    local item
+    for item in * ; do
+        # Ignore the most common cloud storage provider folders
+        if ! [[ "$item" = "Nextcloud" || "$item" = "nextcloud" || "$item" = "Owncloud" || "$item" = "owncloud" || "$item" = "Nextcloud" || "$item" = "Dropbox" || "$item" = "dropbox" || "$item" = "Google Drive File Stream" || "$item" = "My Drive" || "$item" = "Google Drive" || "$item" = "OneDrive" || "$item" = "Backup and Sync" || "$item" = "Box" ]] ; then
+            if [[ -d "$item" ]] ; then
+                cd "$item" || exit
+                rm -rf ./*
+                rm -rf .[^.]*
+                cd .. || exit
+                echo "$HOME/$item contents burned."
+            else
+                rm -f "$item"
+                echo "$HOME/$item burned."
+            fi
+        fi
+    done
+}
 
-history -c
+main
