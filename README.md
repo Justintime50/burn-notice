@@ -4,7 +4,7 @@
 
 Returning a machine to IT, got let go, or got burned? Delete your data with one command.
 
-[![Build Status](https://travis-ci.com/Justintime50/burn-notice.svg?branch=master)](https://travis-ci.com/Justintime50/burn-notice)
+[![Build](https://github.com/Justintime50/burn-notice/workflows/build/badge.svg)](https://github.com/Justintime50/burn-notice/actions)
 [![Licence](https://img.shields.io/github/license/justintime50/burn-notice)](LICENSE)
 
 <img src="assets/showcase.png" alt="Showcase">
