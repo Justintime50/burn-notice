@@ -35,7 +35,7 @@ start_countdown() {
         echo "Burning in $second seconds..."
         sleep 1
     done
-    cd "$HOME" || exit
+    cd "$HOME" || exit 1
 }
 
 remove_hidden_items() {
@@ -43,10 +43,10 @@ remove_hidden_items() {
     local item
     for item in .[^.]* ; do
         if [[ -d "$item" ]] ; then
-            cd "$item" || exit
+            cd "$item" || exit 1
             rm -rf ./*
             rm -rf .[^.]*
-            cd .. || exit
+            cd .. || exit 1
             echo "$HOME/$item contents burned."
         else
             rm -f "$item"
@@ -59,13 +59,26 @@ remove_visible_items() {
     # Remove visible files/folders
     local item
     for item in * ; do
-        # Ignore the most common cloud storage provider folders
-        if ! [[ "$item" = "Nextcloud" || "$item" = "nextcloud" || "$item" = "Owncloud" || "$item" = "owncloud" || "$item" = "Nextcloud" || "$item" = "Dropbox" || "$item" = "dropbox" || "$item" = "Google Drive File Stream" || "$item" = "My Drive" || "$item" = "Google Drive" || "$item" = "OneDrive" || "$item" = "Backup and Sync" || "$item" = "Box" ]] ; then
+        # Ignore some of the most common cloud storage provider folders
+        if ! [[ \
+            "$item" = "Backup and Sync" || \
+            "$item" = "Box" || \
+            "$item" = "dropbox" || \
+            "$item" = "Dropbox" || \
+            "$item" = "Google Drive File Stream" || \
+            "$item" = "Google Drive" || \
+            "$item" = "My Drive" || \
+            "$item" = "nextcloud" || \
+            "$item" = "Nextcloud" || \
+            "$item" = "OneDrive" || \
+            "$item" = "owncloud" || \
+            "$item" = "Owncloud" \
+        ]] ; then
             if [[ -d "$item" ]] ; then
-                cd "$item" || exit
+                cd "$item" || exit 1
                 rm -rf ./*
                 rm -rf .[^.]*
-                cd .. || exit
+                cd .. || exit 1
                 echo "$HOME/$item contents burned."
             else
                 rm -f "$item"

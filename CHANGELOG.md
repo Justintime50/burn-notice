@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.1.2 (2021-06-19)
+
+* Removed duplicate record, unpacked, and sorted list of cloud storage providers to ignore
+* Added explicit exit status of `1` to exit logic where applicable
+
 ## v1.1.1 (2021-01-09)
 
 * Switched from Travis-CI to GitHub Actions
