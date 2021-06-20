@@ -5,6 +5,7 @@
 Returning a machine to IT, got let go, or got burned? Delete your data with one command.
 
 [![Build](https://github.com/Justintime50/burn-notice/workflows/build/badge.svg)](https://github.com/Justintime50/burn-notice/actions)
+[![Version](https://img.shields.io/github/v/tag/justintime50/burn-notice)](https://github.com/Justintime50/burn-notice/releases)
 [![Licence](https://img.shields.io/github/license/justintime50/burn-notice)](LICENSE)
 
 <img src="assets/showcase.png" alt="Showcase">
