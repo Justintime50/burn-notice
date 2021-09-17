@@ -8,7 +8,7 @@ Returning a machine to IT, got let go, or got burned? Delete your data with one 
 [![Version](https://img.shields.io/github/v/tag/justintime50/burn-notice)](https://github.com/Justintime50/burn-notice/releases)
 [![Licence](https://img.shields.io/github/license/justintime50/burn-notice)](LICENSE)
 
-<img src="assets/showcase.png" alt="Showcase">
+<img src="https://raw.githubusercontent.com/justintime50/assets/main/src/burn-notice/showcase.png" alt="Showcase">
 
 </div>
 
