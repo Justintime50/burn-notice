@@ -48,7 +48,7 @@ burn-notice
 
 ## Gotchas
 
-- **Burn Notice is not intended to be a 100% secure solution to destroying data** There are better methods to use instead such as formatting your hard drive. Burn Notice is the quick and dirty solution when you may not have time to format a drive.
+- **Burn Notice is not intended to be a 100% secure solution to destroying data.** There are better methods to use instead such as formatting your hard drive. Burn Notice is the quick and dirty solution when you may not have time to format a drive.
 - **Burn Notice is not intended to render your machine unusable or break the boot sequence.** It will only remove the contents of your main home folder files and various hidden files that may contain sensitive data. 
 
 ### Destroy your Filesystem
