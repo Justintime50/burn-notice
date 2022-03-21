@@ -15,7 +15,7 @@ print_start_message() {
 #################################################### 
 WARNING! BURN NOTICE WILL IRREVERSIBLY DESTROY DATA! 
 #################################################### 
-\n\nPress <ENTER> to continue ONLY if you are sure this is what you want. Otherwise, quit this script."
+\n\nPress any key to continue ONLY if you are sure this is what you want. Otherwise, quit immediately."
 }
 
 print_end_message() {
@@ -23,7 +23,7 @@ print_end_message() {
 #######################################################
 BURN NOTICE COMPLETE! MAKE SURE TO CLOSE THIS TERMINAL!
 #######################################################    
-\n\nTo fully burn your identity, it's suggested to also remove browsing data, log out of iCloud and other installed apps, and if very paranoid, format your hard drive. Remember, this script did not remove your trash, browser data, or log you out of iCloud or other accounts."
+\n\nTo fully burn your identity, it's suggested to also remove browsing data, log out of iCloud and other installed apps, and if very paranoid, format your hard drive.\nRemember, this script did not remove your trash, browser data, or log you out of iCloud or other accounts."
 }
 
 start_countdown() {
@@ -67,6 +67,8 @@ remove_visible_items() {
             "$item" = "Dropbox" ||
             "$item" = "Google Drive File Stream" ||
             "$item" = "Google Drive" ||
+            "$item" = "iCloud Drive" ||
+            "$item" = "iCloud" ||
             "$item" = "My Drive" ||
             "$item" = "nextcloud" ||
             "$item" = "Nextcloud" ||

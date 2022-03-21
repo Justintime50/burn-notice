@@ -12,21 +12,35 @@ Returning a machine to IT, got let go, or got burned? Delete your data with one 
 
 </div>
 
-Burn Notice will remove all files from your home directory, leaving folder structures intact. 
+Burn Notice will remove all files from your home directory, leaving folder structures intact.
 
-### Notable inclusions:
+## What Gets Burned
 
-- `~/Applications`, `~/Desktop`, `~/Documents`, `~/Downloads`, `~/Movies`, `~/Music`, `~/Pictures`
-- `.ssh`, `.aws`, `.zshrc`, `.bash_profile`, `.bash_history`, and `.bash_sessions`
-- Other `dotfiles` and folders that may include keys, secrets, etc housed in the root of your home folder
+**Notable Inclusions**
 
-### This does not include:
+This list is not exhaustive!
+
+- `~/Applications`
+- `~/Desktop`
+- `~/Documents`
+- `~/Downloads`
+- `~/Movies`
+- `~/Music`
+- `~/Pictures`
+- `.ssh`
+- `.aws`
+- `.zshrc` and `.bashrc`
+- `.bash_history`
+- `.bash_sessions`
+- etc
+
+**The Following Are Not Burned**
 
 - Anything stored outside your personal home folder (eg: root `/Applications` folder)
-- This does not sign you out of iCloud or other cloud storage providers (it actively tries to ignore these)
-- This does not remove browser data
-- Removing items in the Trash - [see why](https://www.imore.com/how-force-empty-trash-your-mac-using-terminal)
-- Remove `~/Library` - requires sudo access and is necessary for the user account to function
+- Signing out of iCloud or other cloud storage providers (it actively tries to ignore these)
+- Browsing data
+- Trash - [see why](https://www.imore.com/how-force-empty-trash-your-mac-using-terminal)
+- `~/Library` - requires sudo access and is necessary for the user account to function
 
 ## Install
 
@@ -49,11 +63,11 @@ burn-notice
 ## Gotchas
 
 - **Burn Notice is not intended to be a 100% secure solution to destroying data.** There are better methods to use instead such as formatting your hard drive. Burn Notice is the quick and dirty solution when you may not have time to format a drive.
-- **Burn Notice is not intended to render your machine unusable or break the boot sequence.** It will only remove the contents of your main home folder files and various hidden files that may contain sensitive data. 
+- **Burn Notice is not intended to render your machine unusable or break the boot sequence.** It will only remove the contents of your main home folder files and various hidden files that may contain sensitive data.
 
 ### Destroy your Filesystem
 
-If for whatever reason you really truly do want to destroy the filestructure of your system, run the following:
+If for whatever reason you really truly do want to destroy the filestructure of your system (don't), run the following:
 
 ```bash
 rm -rf /*
