@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.1 (2022-04-05)
+
+- Add additional alternative spellings of cloud provider folders
+
 ## v1.2.0 (2022-03-21)
 
 - Add `iCloud Drive` to the list of ignored cloud providers

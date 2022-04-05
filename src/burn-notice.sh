@@ -65,9 +65,11 @@ remove_visible_items() {
             "$item" = "Box" ||
             "$item" = "dropbox" ||
             "$item" = "Dropbox" ||
+            "$item" = "Drop Box" ||
             "$item" = "Google Drive File Stream" ||
             "$item" = "Google Drive" ||
             "$item" = "iCloud Drive" ||
+            "$item" = "iCloud Drive (Archive)" ||
             "$item" = "iCloud" ||
             "$item" = "My Drive" ||
             "$item" = "nextcloud" ||

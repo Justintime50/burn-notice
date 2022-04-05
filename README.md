@@ -37,10 +37,12 @@ This list is not exhaustive!
 **The Following Are Not Burned**
 
 - Anything stored outside your personal home folder (eg: root `/Applications` folder)
-- Signing out of iCloud or other cloud storage providers (it actively tries to ignore these)
+- Signing out or deleting things like iCloud, DropBox, Google Drive, or other cloud storage providers (it actively tries to ignore these)
 - Browsing data
 - Trash - [see why](https://www.imore.com/how-force-empty-trash-your-mac-using-terminal)
 - `~/Library` - requires sudo access and is necessary for the user account to function
+
+Burn notice runs as the user and does not require sudo access ensuring you can only burn what belongs to you.
 
 ## Install
 
