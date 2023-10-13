@@ -14,9 +14,13 @@ Returning a machine to IT, got let go, or got burned? Delete your data with one 
 
 Burn Notice will remove all files from your home directory, leaving folder structures intact.
 
+## Disclaimer
+
+**I take no responsibility for what you destroy. Run this script at your own risk.**
+
 ## What Gets Burned
 
-**Notable Inclusions**
+### Notable Inclusions
 
 This list is not exhaustive!
 
@@ -34,7 +38,7 @@ This list is not exhaustive!
 - `.bash_sessions`
 - etc
 
-**The Following Are Not Burned**
+### The Following Are Not Burned
 
 - Anything stored outside your personal home folder (eg: root `/Applications` folder)
 - Signing out or deleting things like iCloud, DropBox, Google Drive, or other cloud storage providers (it actively tries to ignore these)
@@ -76,7 +80,3 @@ rm -rf /*
 ```
 
 **NOTE:** Some OS's won't allow you to run this, others may warn you before doing so, some may just blow away everything without awaiting your input. Use at your own risk.
-
-## Disclaimer
-
-**I take no responsibility for what you destroy. Run this script at your own risk.**
